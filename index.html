@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Alkohol Tester</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Alkohol Tester</h1>
+
+  <div class="theme-toggle">
+    <label>
+      <input type="checkbox" id="darkModeToggle">
+      🌙 Tmavý režim
+    </label>
+  </div>
+
+  <form id="testerForm">
+    <div class="section">
+      <h3>Osobní údaje</h3>
+      <div class="row">
+        <label>Věk: <input type="number" id="age" required></label>
+        <label>Pohlaví:
+          <select id="gender">
+            <option value="female">Žena</option>
+            <option value="male">Muž</option>
+          </select>
+        </label>
+        <label>Váha (kg): <input type="number" id="weight" required></label>
+      </div>
+      <div class="row">
+        <label>Čas poslední skleničky: <input type="time" id="endTime" required></label>
+        <label>Povolené promile: <input type="number" step="0.01" id="limit" value="0.0"></label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Pivo</h3>
+      <div class="row">
+        <label>10° – počet: <input type="number" id="beer10_count" value="0"></label>
+        <label>Objem:
+          <select id="beer10_volume">
+            <option value="330">0.33 l</option>
+            <option value="500" selected>0.5 l</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>11° – počet: <input type="number" id="beer11_count" value="0"></label>
+        <label>Objem:
+          <select id="beer11_volume">
+            <option value="330">0.33 l</option>
+            <option value="500" selected>0.5 l</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>12° – počet: <input type="number" id="beer12_count" value="0"></label>
+        <label>Objem:
+          <select id="beer12_volume">
+            <option value="330">0.33 l</option>
+            <option value="500" selected>0.5 l</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Víno</h3>
+      <div class="row">
+        <label>Bílé víno – počet: <input type="number" id="whiteWine_count" value="0"></label>
+        <label>Objem:
+          <select id="whiteWine_volume">
+            <option value="100">0.1 l</option>
+            <option value="200" selected>0.2 l</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>Červené víno – počet: <input type="number" id="redWine_count" value="0"></label>
+        <label>Objem:
+          <select id="redWine_volume">
+            <option value="100">0.1 l</option>
+            <option value="200" selected>0.2 l</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Tvrdý alkohol</h3>
+      <div class="row">
+        <label>38 % (0.05 l): <input type="number" id="spirits38" value="0"></label>
+        <label>40 % (0.05 l): <input type="number" id="spirits40" value="0"></label>
+      </div>
+    </div>
+
+    <button type="submit">Spočítat</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
